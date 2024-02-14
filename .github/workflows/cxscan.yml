@@ -19,5 +19,5 @@ on:
 jobs:
   call-security-scan:
     name: Security Scan
-    uses: resmed/devx-shared-workflows/.github/workflows/cxscan.yml@main
+    uses: testrepo/.github/workflows/cxscan.yml@main
     secrets: inherit
