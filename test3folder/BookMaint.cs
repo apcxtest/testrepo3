@@ -169,6 +169,7 @@ void Book_Show() {
 // Book Open Event end
 		string sSQL = "select * from items where " + sWhere;
 		OleDbDataAdapter dsCommand = new OleDbDataAdapter(sSQL, Utility.Connection);
+		OleDbDataAdapter.close();
 		dsCommand.close();
 		DataSet ds = new DataSet();
 		DataRow row;
@@ -203,7 +204,10 @@ void Book_Show() {
 // Book ShowEdit Event begin
 // Book ShowEdit Event end
 
-	}}
+	}
+	OleDbDataAdapter.close();
+	dsCommand.close();
+	}
 
 		if(ActionInsert){
 
