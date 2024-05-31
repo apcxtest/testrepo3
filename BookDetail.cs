@@ -464,7 +464,7 @@ void Rating_Show() {
 	
 	if (p_Rating_item_id.Value.Length > 0 ) {
 		string sWhere = "";
-		
+		p_Rating_item_id.Value = double p_Rating_item_id.Value
 		sWhere += "item_id=" + CCUtility.ToSQL(p_Rating_item_id.Value, FieldTypes.Number);
 		
 // Rating Open Event begin
